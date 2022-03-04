@@ -16,6 +16,7 @@ export default function AuthSocial() {
   const cookiePolicy = "single_host_origin";
   const onSuccess = async (profile) => {
     const copyObj = { ...profile.profileObj };
+    console.log(copyObj);
     await dispatch(loginUser(copyObj));
     navigate("/dashboard/app");
   };
