@@ -90,6 +90,7 @@ export const BasicInfo = ({ className, onBack, onNext, ...rest }) => {
                   style={{ width: "40%" }}
                   error={Boolean(touched.firstName && errors.firstName)}
                   label="First Name"
+                  helperText={"First Name is Required"}
                   name="firstName"
                   required
                   onBlur={handleBlur}
@@ -104,6 +105,7 @@ export const BasicInfo = ({ className, onBack, onNext, ...rest }) => {
                   style={{ width: "40%" }}
                   error={Boolean(touched.lastName && errors.lastName)}
                   label="Last Name"
+                  helperText={"Last Name is Required"}
                   name="lastName"
                   required
                   onBlur={handleBlur}
@@ -118,6 +120,7 @@ export const BasicInfo = ({ className, onBack, onNext, ...rest }) => {
                   style={{ width: "40%" }}
                   error={Boolean(touched.email && errors.email)}
                   label="Email"
+                  helperText={"Email is Required and should be valid"}
                   name="email"
                   required
                   onBlur={handleBlur}

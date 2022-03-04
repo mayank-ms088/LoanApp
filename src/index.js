@@ -2,7 +2,7 @@
 import "simplebar/src/simplebar.css";
 
 import ReactDOM from "react-dom";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
 //
@@ -18,11 +18,11 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     <HelmetProvider>
-      <HashRouter>
+      <BrowserRouter>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <App />
         </MuiPickersUtilsProvider>
-      </HashRouter>
+      </BrowserRouter>
     </HelmetProvider>{" "}
   </Provider>,
 
