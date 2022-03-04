@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import clsx from "clsx";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import {
   Avatar,
@@ -231,16 +231,6 @@ const LoanFormView = ({ className, onClose, ...rest }) => {
                 {activeStep === 2 && (
                   <LoanInfo onBack={handleBack} onNext={handleNext} />
                 )}
-                {/* {activeStep === 3 && (
-                                        <EventConfig
-                                            selectedChannels={eventObj ? eventObj.channels : null}
-                                            selectedApp={selectedApp}
-                                            event={eventObj}
-                                            onBack={handleBack}
-                                            onComplete={handleComplete}
-                                            isEdit={isEdit}
-                                        />
-                                    )} */}
               </Box>
             </Grid>
           </Grid>
