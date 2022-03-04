@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-// import { useDispatch } from "react-redux";
+import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import * as Yup from "yup";
@@ -14,9 +13,8 @@ import {
   Container,
 } from "@material-ui/core";
 
-import { DateTimePicker } from "@material-ui/pickers";
 import moment from "moment";
-import { Checkbox, FormControlLabel } from "@mui/material";
+import { Checkbox } from "@mui/material";
 const useStyles = makeStyles((theme) => ({
   root: {},
   addTab: {
@@ -31,12 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const LoanInfo = ({ className, onBack, onNext, ...rest }) => {
   const classes = useStyles();
-  // const dispatch = useDispatch();
-  const [dateOpen, setDateOpen] = useState("");
 
-  const handleDateOpen = (type) => {
-    setDateOpen(type);
-  };
   return (
     <Page className={classes.root} title="Basic Information">
       <Container maxWidth={false}>
@@ -56,7 +49,7 @@ export const LoanInfo = ({ className, onBack, onNext, ...rest }) => {
             endDate: Yup.date().required("End Date is required!"),
             fixedInterest: Yup.bool(),
           })}
-          onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
+          onSubmit={async (values, {}) => {
             try {
               if (onNext) {
                 onNext(values);
@@ -72,8 +65,6 @@ export const LoanInfo = ({ className, onBack, onNext, ...rest }) => {
             handleChange,
             handleSubmit,
             isSubmitting,
-            setFieldValue,
-            setFieldTouched,
             touched,
             values,
           }) => (

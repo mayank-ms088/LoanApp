@@ -1,4 +1,4 @@
-import { createUpdateLoan, deleteLoans } from "../events/loansEvents";
+import { deleteLoans } from "../events/loansEvents";
 import { login, logout } from "../events/userEvents";
 export function loginUser(user) {
   return async (dispatch) => {
